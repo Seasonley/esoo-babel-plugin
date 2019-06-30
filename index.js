@@ -129,11 +129,11 @@ module.exports = function(babel) {
 		if(firstBlockStatement) {
 		    for(directiveID in firstBlockStatement.node.directives) {
 				let directive = firstBlockStatement.node.directives[directiveID];
-				if(directive.value.value == 'oo disable'){
+				if(directive.value.value === 'oo disable'){
 				    path.node.OO_HAVE_DEFAULT = true;
 				    path.node.OO_STATUS = false;
 				    break;
-				} else if(directive.value.value == 'oo enable'){
+				} else if(directive.value.value === 'oo enable'){
 				    path.node.OO_HAVE_DEFAULT = true;
 				    path.node.OO_STATUS = true;
 				    break;
@@ -153,13 +153,13 @@ module.exports = function(babel) {
     return {
 		visitor: {
 		    Program(path) {
-				path.unshiftContainer('body', preCodeAST);
+				path.node.directives.some(d=>d.value.value==='oo enable')&&path.unshiftContainer('body', preCodeAST);
 		    },
 		    BlockStatement(path) {
 				initStatus(path);
 		    },
 		    BinaryExpression(path) {
-				initStatus(path, true);
+				initStatus(path);
 				if(!path.node.OO_STATUS) return;
 				var tab2 = {
 				    '+': 'add',
@@ -182,6 +182,7 @@ module.exports = function(babel) {
 				    '==': 'eq',
 				    '===': 'eq',
 				    '!=': 'ne',
+				    '!==': 'ne',
 				};
 				if(path.node.operator in tab2){
 					path.replaceWith(
@@ -193,7 +194,7 @@ module.exports = function(babel) {
 				}
 		    },
 		    UnaryExpression(path) {
-				initStatus(path, true);
+				initStatus(path);
 				if(!path.node.OO_STATUS) return;
 				var tab1={
 					'-':'neg',
