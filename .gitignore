@@ -2,3 +2,4 @@ node_modules
 .directory
 .nyc_output
 coverage
+examples/lib
