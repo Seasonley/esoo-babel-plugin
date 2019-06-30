@@ -1,4 +1,4 @@
-# esoo-babel-plugin(https://npmjs.org/package/esoo-babel-plugin)
+# [esoo-babel-plugin](https://npmjs.org/package/esoo-babel-plugin)
 
 [![NPM](https://nodei.co/npm/esoo-babel-plugin.png)](https://npmjs.org/package/esoo-babel-plugin)
 
@@ -6,7 +6,6 @@
 [![Build Status][travis-image]][travis-url]
 [![Coverage Status](https://coveralls.io/repos/github/Seasonley/esoo-babel-plugin/badge.svg?branch=master)](https://coveralls.io/github/Seasonley/esoo-babel-plugin?branch=master)
 [![Downloads][downloads-image]][npm-url]
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSeasonley%2Fesoo-babel-plugin.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FSeasonley%2Fesoo-babel-plugin?ref=badge_shield)
 
 
 A babel-plugin for ES operator overload. 
@@ -14,7 +13,7 @@ A babel-plugin for ES operator overload.
 Write the operator overload like **python**.
 
 
-## How to use
+## Usage
 
 1. install package
 
@@ -78,7 +77,7 @@ cd lib
 node index.js
 ```
 
-## Document
+## Documentation
 
 - BinaryExpression
 
@@ -111,6 +110,9 @@ node index.js
 |`+`| `__pos__()`||`this`|
 |`~`| `__invert__()`||`this`|
 
+#License
+
+[MIT](https://github.com/Seasonley/esoo-babel-plugin/blob/master/LICENSE)
 
 
 [downloads-image]: http://img.shields.io/npm/dm/esoo-babel-plugin.svg
