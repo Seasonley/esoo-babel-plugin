@@ -50,7 +50,7 @@ A babel-plugin for ES operator overload.
     console.log(a === b - a);
     //true
     ```
-## examples
+## Examples
 
 You can find demo in `/examples`, then build and run as follow:
 
@@ -66,31 +66,31 @@ ndoe index.js
 
 - BinaryExpression
 
-|op| function name|
-|-|-|
-|`+`| `__add__(a,b)`|
-|`-`| `__sub__(a,b)`|
-|`*`| `__mul__(a,b)`|
-|`/`| `__div__(a,b)`|
-|`%`| `__mod__(a,b)`|
-|`**`| `__pow__(a,b)`|
-|`&`| `__and__(a,b)`|
-|`|`| `__or__(a,b)`|
-|`^`| `__xor__(a,b)`|
-|`<<`| `__lshift__(a,b)`|
-|`>>`| `__rshift__(a,b)`|
-|`<`| `__lt__(a,b)`|
-|`>`| `__gt__(a,b)`|
-|`<=`| `__le__(a,b)`|
-|`>=`| `__ge__(a,b)`|
-|`==`| `__eq__(a,b)`|
-|`===`| `__eq__(a,b)`|
-|`!=`| `__ne__(a,b)`|
+|op| function | node.left|node.right|
+|-|-|-|-|
+|`+`| `__add__(b)`|`this`|`b`|
+|`-`| `__sub__(b)`|`this`|`b`|
+|`*`| `__mul__(b)`|`this`|`b`|
+|`/`| `__div__(b)`|`this`|`b`|
+|`%`| `__mod__(b)`|`this`|`b`|
+|`**`| `__pow__(b)`|`this`|`b`|
+|`&`| `__and__(b)`|`this`|`b`|
+|`\|`| `__or__(b)`|`this`|`b`|
+|`^`| `__xor__(b)`|`this`|`b`|
+|`<<`| `__lshift__(b)`|`this`|`b`|
+|`>>`| `__rshift__(b)`|`this`|`b`|
+|`<`| `__lt__(b)`|`this`|`b`|
+|`>`| `__gt__(b)`|`this`|`b`|
+|`<=`| `__le__(b)`|`this`|`b`|
+|`>=`| `__ge__(b)`|`this`|`b`|
+|`==`| `__eq__(b)`|`this`|`b`|
+|`===`| `__eq__(b)`|`this`|`b`|
+|`!=`| `__ne__(b)`|`this`|`b`|
 
 - UnaryExpression
 
-|op| function name|
-|-|-|
-|`-`| `__neg__(a)`|
-|`+`| `__pos__(a)`|
-|`~`| `__invert__(a)`|
+|op| function name|node.left|node.right|
+|-|-|-|-|
+|`-`| `__neg__()`||`this`|
+|`+`| `__pos__()`||`this`|
+|`~`| `__invert__()`||`this`|
