@@ -2,9 +2,6 @@
 const Vector=require('./Vector')
 const String=require('./String')
 
-(function(){
-    a=2*3
-})()
 let a = new Vector(1, 2), b = new Vector(2, 4);
 
 console.log(`${a + b * 5}`);
