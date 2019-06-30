@@ -1,19 +1,33 @@
-# esoo-babel-plugin
+# esoo-babel-plugin(https://npmjs.org/package/esoo-babel-plugin)
+
+[![NPM](https://nodei.co/npm/esoo-babel-plugin.png)](https://npmjs.org/package/esoo-babel-plugin)
+
+[![NPM version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Coverage Status](https://coveralls.io/repos/github/Seasonley/esoo-babel-plugin/badge.svg?branch=master)](https://coveralls.io/github/Seasonley/esoo-babel-plugin?branch=master)
+[![Downloads][downloads-image]][npm-url]
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FSeasonley%2Fesoo-babel-plugin.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FSeasonley%2Fesoo-babel-plugin?ref=badge_shield)
+
 
 A babel-plugin for ES operator overload. 
+
+Write the operator overload like **python**.
 
 
 ## How to use
 
 1. install package
+
     ```
     npm install esoo-babel-plugin
     ```
-2. add plugin in `.babelrc`
+2. add plugin in **.babelrc**
+
     ```
     "plugins": ["esoo-babel-plugin"]
     ```
-3. write your operator in a `Class` like this
+3. write your operator in a **Class** like this
+
     ```js
     class Vector{
 
@@ -38,7 +52,8 @@ A babel-plugin for ES operator overload.
         }
     }
     ```
-4. import Vector and add `oo enable`
+4. import Vector and add `'oo enable';`
+
     ```js
     'oo enable';
     const Vector=require('../Vector')
@@ -50,6 +65,7 @@ A babel-plugin for ES operator overload.
     console.log(a === b - a);
     //true
     ```
+
 ## Examples
 
 You can find demo in `/examples`, then build and run as follow:
@@ -59,7 +75,7 @@ cd examples
 npm i
 npm run build
 cd lib
-ndoe index.js
+node index.js
 ```
 
 ## Document
@@ -94,3 +110,12 @@ ndoe index.js
 |`-`| `__neg__()`||`this`|
 |`+`| `__pos__()`||`this`|
 |`~`| `__invert__()`||`this`|
+
+
+
+[downloads-image]: http://img.shields.io/npm/dm/esoo-babel-plugin.svg
+[npm-url]: https://npmjs.org/package/esoo-babel-plugin
+[npm-image]: http://img.shields.io/npm/v/esoo-babel-plugin.svg
+
+[travis-url]: https://travis-ci.org/Seasonley/esoo-babel-plugin
+[travis-image]: http://img.shields.io/travis/Seasonley/esoo-babel-plugin.svg
