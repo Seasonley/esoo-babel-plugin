@@ -1,4 +1,4 @@
-# [esoo-babel-plugin](https://npmjs.org/package/esoo-babel-plugin)
+# [ㅍ_ㅍ] [esoo-babel-plugin](https://npmjs.org/package/esoo-babel-plugin)
 
 [![NPM](https://nodei.co/npm/esoo-babel-plugin.png)](https://npmjs.org/package/esoo-babel-plugin)
 
@@ -8,10 +8,9 @@
 [![Downloads][downloads-image]][npm-url]
 
 
-A babel-plugin for ES operator overload. 
+A babel-plugin for ES operator overload. Write the operator overload like **python**.
 
-Write the operator overload like **python**.
-
+(I try to create a [esoo-loader](https://github.com/Seasonley/esoo-loader) to fix the precision of calculations . )
 
 ## Usage
 
@@ -79,7 +78,7 @@ node index.js
 
 ## Documentation
 
-- BinaryExpression
+### BinaryExpression
 
 |op| function | node.left|node.right|
 |-|-|-|-|
@@ -102,7 +101,7 @@ node index.js
 |`===`| `__eq__(b)`|`this`|`b`|
 |`!=`| `__ne__(b)`|`this`|`b`|
 
-- UnaryExpression
+### UnaryExpression
 
 |op| function name|node.left|node.right|
 |-|-|-|-|
@@ -110,9 +109,9 @@ node index.js
 |`+`| `__pos__()`||`this`|
 |`~`| `__invert__()`||`this`|
 
-#License
+# License
 
-[MIT](https://github.com/Seasonley/esoo-babel-plugin/blob/master/LICENSE)
+[MIT License](https://github.com/Seasonley/esoo-babel-plugin/blob/master/LICENSE) Copyright (c) 2019 Seasonley
 
 
 [downloads-image]: http://img.shields.io/npm/dm/esoo-babel-plugin.svg
